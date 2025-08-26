@@ -10,8 +10,8 @@ body{
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    /* overflow: hidden;
-    touch-action: manipulation; */
+    overflow: hidden;
+    touch-action: manipulation; 
 }
 
 body h2{
