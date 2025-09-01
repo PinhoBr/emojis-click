@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'poppins';
+    src: url(../font/Poppins-SemiBold.ttf);
+}
+body{
+    margin: 0;
+    font-family: 'poppins';
+    background-color: #0afff3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    touch-action: manipulation; 
+}
+
+body h2{
+    color: #ffffff;
+}
+#header{
+    background-color: #ff284c;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.644);
+}
+#header h1{
+    margin: 0;
+    color: #ffffff;
+    font-size: 24px;
+    
+}
+#header p{
+    color: #ffffff; 
+}
+#pontos{
+    font-size: 20px;
+    margin: 10px 0;
+    
+}
+#game-area{
+    width: 100%;
+    min-width: 400px;
+    background-color: #222222;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+
+.emoji{
+    position: absolute;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.2s;
+
+}
+.emoji.clicado{
+    transform: scale(1.2);
+}
+#lista-historico{
+    list-style: none;
+    padding: 0;
+    margin: 10px;
+    max-width: 400px;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#lista-historico li{
+    padding: 8px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+
+}
+
+#lista-historico li.zoeiro{
+   color: #ff284c;
+   font-weight: bold;
+
+}
+@media (max-width: 600px) {
+    #area-jogo{
+        max-width: 100%;
+    }
+    #cabecalho h1 {
+        font-size: 20px;
+    }
+    #pontos{
+        font-size: 18px;
+    }
+}
