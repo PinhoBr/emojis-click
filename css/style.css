@@ -14,9 +14,6 @@ body{
     touch-action: manipulation; 
 }
 
-body h2{
-    color: #ffffff;
-}
 #header{
     background-color: #ff284c;
     width: 100%;
@@ -24,26 +21,30 @@ body h2{
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.644);
 }
+
 #header h1{
     margin: 0;
     color: #ffffff;
-    font-size: 24px;
-    
+    font-size: 24px; 
 }
-#header p{
+
+#header p, h2{
     color: #ffffff; 
 }
+
 #pontos{
     font-size: 20px;
     margin: 10px 0;
-    
+    color: #eee;
 }
+
 #game-area{
     width: 100%;
     min-width: 400px;
     background-color: #222222;
     border-radius: 10px;
     flex-grow: 1;
+    position: relative;
 }
 
 .emoji{
@@ -52,12 +53,13 @@ body h2{
     cursor: pointer;
     user-select: none;
     transition: transform 0.2s;
-
 }
+
 .emoji.clicado{
     transform: scale(1.2);
 }
-#lista-historico{
+
+#historico{
     list-style: none;
     padding: 0;
     margin: 10px;
@@ -68,24 +70,23 @@ body h2{
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-#lista-historico li{
+
+#historico li{
     padding: 8px;
     font-size: 14px;
     border-bottom: 1px solid #eee;
-
 }
 
-#lista-historico li.zoeiro{
+#historico li.zoeiro{
    color: #ff284c;
    font-weight: bold;
-
 }
 
 @media (max-width: 600px) {
-    #area-jogo{
+    #game-area{
         max-width: 100%;
     }
-    #cabecalho h1 {
+    #header h1 {
         font-size: 20px;
     }
     #pontos{

@@ -34,7 +34,7 @@ function criarEmoji() {
     emoji.textContent = emojis[indiceAleatorio]
 
     const maxX = areaJogo.offsetWidth - 50
-    const maxY = areaJogo.offsetWidth - 50
+    const maxY = areaJogo.offsetHeight - 50
 
     emoji.style.left = `${Math.random() * maxX}px`
     emoji.style.top = `${Math.random() * maxY}px`
@@ -65,6 +65,6 @@ function criarEmoji() {
         
     },2000)
 }
-setInterval(criarEmoji, 1500)
+setInterval(criarEmoji, 500)
 
     criarEmoji()
