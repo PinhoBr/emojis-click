@@ -1,8 +1,14 @@
 const areaJogo = document.querySelector('#game-area')
 const PontosDisplay = document.querySelector('#pontos')
 const ListaHistorico = document.querySelector('#historico')
+const recordedisplay = document.querySelector('#recorde')
+const resetBtn = document.querySelector('#reset-btn')
 
 let pontos = 0;
+let recorde = localStorage.getItem('recorde') ? parseInt(localStorage.getItem('recorde')) : 0
+
+PontosDisplay.textContent = pontos
+recordedisplay.textContent = recorde
 const emojis = ['😊','👌','😂','🤣','😍','😘']
 const mensagensZoeiras = [
     'mandou ver no emoji calabreso!😉',
@@ -43,7 +49,7 @@ function criarEmoji() {
     emoji.addEventListener('click', ()=>{
      emoji.classList.add('clicado')
      pontos += 5
-     PontosDisplay.textContent = pontos
+     
 
      const mensagem = mensagensZoeiras[Math.floor(Math.random()*mensagensZoeiras.length)]
      adicionarHistorico(`${mensagem} (${emoji.textContent})`)
@@ -56,13 +62,10 @@ function criarEmoji() {
     setTimeout(() =>{
         if(emoji.isConnected){
             emoji.remove()
-            pontos = math.max(0, pontos -1)
-            pontosDisplay.textContent = pontos
-            adicionarHistorico()
+            pontos = Math.max(0, pontos -1)
+            PontosDisplay.textContent = pontos
             adicionarHistorico(`emoji nao pego = sem zoeira!${emoji.textContent}! 🤣`)
-        }
-        
-        
+        }  
     },2000)
 }
 setInterval(criarEmoji, 500)
